@@ -73,3 +73,6 @@ while is_on:
 
     print(user1.id)      
 
+#import turtle as t    we can now use 't' instead turtle , e.g. t.Turtle() to create an object
+# from turtle import * #imports everything from the module using * it's
+# great but gets very confusing sometimes due to mix of diff func present in module and we become unable to know it's orgin and doing
