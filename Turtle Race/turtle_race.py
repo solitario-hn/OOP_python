@@ -5,10 +5,12 @@ is_race_on=False
 
 screen=Screen()
 screen.setup(width=1000,height=500)
+screen.title("The Turtle Race")
+screen.bgcolor('black')
 
 
-colors=["black","blue","VioletRed2","tomato3","orange","green"]
-name=["jaat","chaprasi clerk","gupta","ceo sahab","kumal","gooner"]
+colors=["SpringGreen","blue","VioletRed2","tomato3","orange","green"]
+name=["mehak","nidhi","shimaran","prerna","kashish","shreya"]
 # Show the user who is playing after creating all turtles
 players_list = ", ".join(name)
 user_bet = screen.textinput(title="Make your bet!", 
@@ -36,9 +38,9 @@ while is_race_on:
             winning_color=turtles.pencolor()
             winner_name=turtles.name
             if winner_name.lower()==user_bet.lower():
-                print(f"You've won.The {winner_name} won the game.")
+                print(f"You've won.{winner_name} won the game.")
             else:
-                print(f"You've lost.The {winner_name} won the game.")
+                print(f"You've lost.{winner_name} won the game.")
         random_distance=random.randint(0,10)
         turtles.forward(random_distance)
 
