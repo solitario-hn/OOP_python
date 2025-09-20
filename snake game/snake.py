@@ -18,7 +18,7 @@ class Snake:
             self.add_segment(positions=positions)
     
     def move(self):
-            #using a for loop with range function in order to get a result hwere 3rd segment follows - 2 follows 1- and 1 is headed wheere user asks its to - that way segments don't break.
+            #using a for loop with range function in order to get a result here 3rd segment follows - 2 follows 1- and 1 is headed wheere user asks its to - that way segments don't break.
         for seg in range(len(self.segments)-1,0,-1):   #raneg func works like c lang and doesn't take keyword arguemnts.
             pos=seg-1
             new_x=self.segments[pos].xcor()
