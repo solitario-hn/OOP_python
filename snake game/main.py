@@ -2,7 +2,7 @@ from turtle import Screen
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
-import time #helps in delaying the motion we see on canvas
+import time #helps in delaying the motion we see on canvas  
 screen=Screen()
 screen.setup(width=600,height=600)
 screen.bgcolor('black')
@@ -24,14 +24,14 @@ while is_game_on:
     snake.move()
     #To do game over whenever snake head touches the wall. 
     if snake.head.xcor()<-285 or snake.head.xcor()>285 or snake.head.ycor()<-285 or snake.head.ycor()>285:
-        is_game_on=False
-        scoreboard.game_over()
+        snake.reset()
+        scoreboard.reset()
         
     #detecting when head hits any segment of the snake body
     for segment in snake.segments[1:]:
         if snake.head.distance(segment)<10:
-            is_game_on=False
-            scoreboard.game_over()
+            snake.reset()
+            scoreboard.reset()
     #to detect collision with the food and increasing snake body.
     if snake.head.distance(food)<15:
         food.refresh_food()

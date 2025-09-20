@@ -38,7 +38,14 @@ class Snake:
         x_cor=self.segments[-1].xcor()   #using -1 slicing to attach new segment to the last segment 
         y_cor=self.segments[-1].ycor()
         self.add_segment(positions=(x_cor,y_cor))
-        
+     
+     
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000,1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head=self.segments[0]  
        
     
     def up(self):
