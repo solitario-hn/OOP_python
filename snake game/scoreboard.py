@@ -30,5 +30,5 @@ class Scoreboard(Turtle):
         self.score=0
         self.update_scoreboard()
         
-    
+
 
