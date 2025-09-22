@@ -25,10 +25,7 @@ answer_state=screen.textinput(title="US STATES GAME", prompt=f"Name a US state :
 while len(corrected_ans)<50:
     answer_state=screen.textinput(title="US STATES GAME", prompt=f"{states_correct}/50 States Correct ,Name another: ").lower()
     if answer_state=="exit":
-        missing_states=[]
-        for state in state_name:
-            if state not in corrected_ans:
-                missing_states.append(state)
+        missing_states=[state for state in state_name if state not in corrected_ans]
         dict={
             "states_to_learn":missing_states
         }
