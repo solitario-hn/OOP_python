@@ -6,3 +6,6 @@ Amazon|kira890home@gmail.com|SC5!G#8q4Vybo&C
 Skype|kira890home@gmail.com|hixqd97dd1t5
 Reddit|kira890home@gmail.com|s#AZT2+a1vngE5
 Crunchyroll|kira890home@gmail.com|mAT6EtHJ#gv%&g3
+
+
+#this was the previous way of us saving our data later we improved to a json format to easily search in our exisitng data.
