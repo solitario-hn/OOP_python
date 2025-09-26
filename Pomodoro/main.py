@@ -77,7 +77,7 @@ window.config(padx=150,pady=100,bg=YELLOW)
 canvas=Canvas(width=200,height=224,bg=YELLOW,highlightthickness=0)   #choosing the canvas size acc to our size of img so it'll fit perfectly.
 tomato_image=PhotoImage(file="tomato.png")        #a photoimage class in tkinter which helps us retirieve an image from a file
 canvas.create_image(100,112,image=tomato_image)    #giving x and y coordinates as centre of window to place image evenly out.
-text_gen=canvas.create_text(100,140,text="00:00",fill="pink",font=(FONT_NAME,35,"bold"))  #to use item config we need to firt store create text into a separate variable.
+text_gen=canvas.create_text(100,140,text="00:00",fill="pink",font=(FONT_NAME,35,"bold"))  #to use item config we need to first store create text into a separate variable.
 canvas.grid(row=1,column=1)
 
 
