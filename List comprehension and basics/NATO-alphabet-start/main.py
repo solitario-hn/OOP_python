@@ -30,8 +30,19 @@ nato_phonetic=pandas.read_csv("nato_phonetic_alphabet.csv")
 data_dict={row.letter:row.code for (index,row) in nato_phonetic.iterrows()}  #{"A": "Alfa", "B": "Bravo"} this will give us the desired result liek this looping through each index row one by one and fetching row . letter and code as new key and value
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
+is_on=True
+while is_on:
+    user_name=input("Enter your name: ").upper()
+    try: 
+        user_code=[data_dict[letter] for letter in user_name]
+    except KeyError:
+        print("Sorry only letters in alphabets please.")
+    else:
+        print("HERE IS YOUR PHONETIC MESSAGE.\n")
+        print(user_code)
+    finally:
+        user_choice=input("Do you want another phonetic message? 'y' or 'n' :")
+        if user_choice=='n':
+            is_on=False
+            print("See you next time.")
 
-user_name=input("Enter your name: ").upper()
-user_code=[data_dict[letter] for letter in user_name]
-print("HERE IS YOUR PHONETIC MESSAGE.\n")
-print(user_code)
