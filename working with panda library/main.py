@@ -64,3 +64,63 @@ squirrel_data={'Fur Color':['gray','red','black'],    #adding the data we fetche
 squirrel_count=pandas.DataFrame(squirrel_data)
 squirrel_count.to_csv("squirrel_count.csv")
 
+from tkinter import *
+import pandas
+#Constants
+FONTNAME="SF Mono"
+# ---------------------------- PASSWORD GENERATOR ------------------------------- #
+
+# ---------------------------- SAVE PASSWORD ------------------------------- #
+
+
+# def save():
+#     web=[entry_website.get()]
+#     em=[entry_email.get()]
+#     pas=[entry_pass.get()]
+    
+#     data_dict={
+#         "website":[web],
+#         "Email":[em],
+#         "Password":[pas],
+#     }
+#     pass_file=pandas.DataFrame(data_dict)
+#     try:
+#         # Try to read existing file and append
+#         existing_data = pandas.read_csv("data.txt", index_col=0)  #index col ignores the index column .
+#         updated_data = pandas.concat([existing_data, pass_file], ignore_index=True)   #ignore index helps in dataframe to ignore the index value , and just create another line without creating duplicate indexes.
+#         updated_data.to_csv("data.txt")
+#     except FileNotFoundError:
+#         # File doesn't exist, create new one
+#         pass_file.to_csv("data.txt")
+    
+#     # Clear the entries after saving
+#     entry_website.delete(0, END)
+#     entry_pass.delete(0, END)
+
+# df1 = pandas.DataFrame({"name": ["Alice"], "age": [25]})  # index: [0]
+# df2 = pandas.DataFrame({"name": ["Bob"], "age": [30]})    # index: [0]
+
+# Without ignore_index:
+#result = pandas.concat([df1, df2])
+# Creates:  name   age
+#       0   Alice  25
+#       0   Bob    30    <- Duplicate index!
+
+# With ignore_index=True:
+#result = pandas.concat([df1, df2], ignore_index=True)
+# Creates:  name   age
+#       0   Alice  25
+#       1   Bob    30    <- Clean sequential index
+
+
+# # Without index_col:
+# df = pandas.read_csv("data.txt")
+# # Creates:  Unnamed: 0    website    Email    Password
+# #           0             google     john@    pass123
+# #           1             facebook   jane@    abc456
+
+# # With index_col=0:
+# df = pandas.read_csv("data.txt", index_col=0)  
+# # Creates:  website    Email    Password
+# #           google     john@    pass123
+# #           facebook   jane@    abc456

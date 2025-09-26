@@ -10,7 +10,7 @@ screen.bgcolor('black')
 
 
 colors=["SpringGreen","blue","VioletRed2","tomato3","orange","green"]
-name=["mehak","nidhi","shimaran","prerna","kashish","shreya"]
+name=["Bablu","Nidhi","Hemant","Anaya","Hem","Hemu"]
 # Show the user who is playing after creating all turtles
 players_list = ", ".join(name)
 user_bet = screen.textinput(title="Make your bet!", 
