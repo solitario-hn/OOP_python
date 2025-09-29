@@ -11,13 +11,4 @@
 #     return {"username":user}
 
 
-def name(name:str):
-    return name+"89800"
-
-
-
-print(name(790))
-
-
- 
    
